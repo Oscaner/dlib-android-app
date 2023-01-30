@@ -5,6 +5,7 @@
 package com.tzutalin.dlibtest;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -227,6 +228,7 @@ public class MainActivity extends AppCompatActivity {
         demoFaceDet(imgPath);
     }
 
+    @SuppressLint("StaticFieldLeak")
     private void demoPersonDet(final String imgPath) {
         new AsyncTask<Void, Void, List<VisionDetRet>>() {
             @Override
@@ -266,6 +268,7 @@ public class MainActivity extends AppCompatActivity {
         }.execute();
     }
 
+    @SuppressLint("StaticFieldLeak")
     private void demoFaceDet(final String imgPath) {
         new AsyncTask<Void, Void, List<VisionDetRet>>() {
             @Override
